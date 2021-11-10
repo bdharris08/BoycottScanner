@@ -8,7 +8,9 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+// import { Camera, CameraPermissionStatus } from 'react-native-vision-camera';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -57,6 +59,12 @@ const Section: React.FC<{
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
+
+  //const [cameraPermission, setCameraPermission] = useState<CameraPermissionStatus>();
+
+  // useEffect(() => {
+  //   Camera.getCameraPermissionStatus().then(setCameraPermission);
+  // }, []);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
